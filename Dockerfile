@@ -26,7 +26,7 @@ ENV HUGO_VERSION 0.70.0
 ENV HUGO_TARBALL hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
 ENV HUGO_BINARY hugo_${HUGO_VERSION}_linux_amd64
 
-ADD https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_TARBALL} /usr/local/
+ADD https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_TARBALL} /usr/local/
 RUN tar xzf /usr/local/${HUGO_TARBALL} -C /usr/local/ \
         && ln -s /usr/local/${HUGO_BINARY}/${HUGO_BINARY} /usr/local/bin/hugo \
         && rm /usr/local/${HUGO_TARBALL}
