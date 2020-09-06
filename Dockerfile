@@ -9,6 +9,7 @@ RUN apt-get -qq update \
 RUN apt-get -qq update \
         && DEBIAN_FRONTEND=noninteractive apt-get -qq install -y --no-install-recommends git-core
 
+ENV NODE_PATH /usr/lib/node_modules
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN apt-get -qq install -y nodejs
 RUN npm install -g workbox-cli
